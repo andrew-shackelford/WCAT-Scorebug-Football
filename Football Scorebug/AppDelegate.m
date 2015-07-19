@@ -728,6 +728,7 @@ NSString *replayHide;
 
 - (IBAction)displayEnterFullScreen:(id)sender {
     [_displayFullScreenButton setTransparent:YES];
+    [_displayFullScreenButton setEnabled:NO];
     [_displayWindow toggleFullScreen:nil];
 
 }
