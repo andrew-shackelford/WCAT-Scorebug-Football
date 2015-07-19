@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="15A204h" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="15A216g" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
     </dependencies>
     <objects>
@@ -718,7 +719,7 @@
         <window title="WCAT Football Scorebug - Control" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <rect key="contentRect" x="335" y="390" width="1152" height="720"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <value key="minSize" type="size" width="1152" height="720"/>
             <value key="maxSize" type="size" width="1152" height="720"/>
             <view key="contentView" id="EiT-Mj-1SZ">
@@ -1371,7 +1372,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <rect key="contentRect" x="283" y="305" width="1920" height="1080"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <value key="minSize" type="size" width="1920" height="1080"/>
             <value key="maxSize" type="size" width="1920" height="1080"/>
             <view key="contentView" id="N1D-iC-c6a">
@@ -1400,7 +1401,7 @@
                                 <rect key="frame" x="688" y="223" width="159" height="32"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Away Name" id="Ggm-MO-XAM">
-                                    <font key="font" metaFont="system" size="24"/>
+                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1409,7 +1410,7 @@
                                 <rect key="frame" x="851" y="223" width="159" height="32"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Away Score" id="hQX-Tk-VI0">
-                                    <font key="font" metaFont="system" size="24"/>
+                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1418,7 +1419,7 @@
                                 <rect key="frame" x="1008" y="223" width="159" height="32"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Home Name" id="TuA-nT-28z">
-                                    <font key="font" metaFont="system" size="24"/>
+                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1438,7 +1439,7 @@
                                 <rect key="frame" x="1171" y="223" width="159" height="32"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Home Score" id="oDQ-uh-jux">
-                                    <font key="font" metaFont="system" size="24"/>
+                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1447,7 +1448,7 @@
                                 <rect key="frame" x="776" y="747" width="159" height="32"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Away Name" id="zKL-9U-4vS">
-                                    <font key="font" metaFont="system" size="24"/>
+                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1456,7 +1457,7 @@
                                 <rect key="frame" x="977" y="747" width="159" height="32"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Away Score" id="4Gb-gB-j4B">
-                                    <font key="font" metaFont="system" size="24"/>
+                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1465,7 +1466,7 @@
                                 <rect key="frame" x="776" y="674" width="159" height="32"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Home Name" id="5MF-BU-Ury">
-                                    <font key="font" metaFont="system" size="24"/>
+                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1474,7 +1475,7 @@
                                 <rect key="frame" x="977" y="674" width="159" height="32"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Home Score" id="yJP-C1-zjg">
-                                    <font key="font" metaFont="system" size="24"/>
+                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1483,7 +1484,7 @@
                                 <rect key="frame" x="1327" y="223" width="220" height="32"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Down and Distance" id="7nQ-qJ-MNG">
-                                    <font key="font" metaFont="system" size="24"/>
+                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1492,7 +1493,7 @@
                                 <rect key="frame" x="1556" y="223" width="109" height="32"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Quarter" id="HLV-ck-pFo">
-                                    <font key="font" metaFont="system" size="24"/>
+                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1501,7 +1502,7 @@
                                 <rect key="frame" x="1681" y="223" width="109" height="32"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Clock" id="0Om-E0-mey">
-                                    <font key="font" metaFont="system" size="24"/>
+                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1510,7 +1511,7 @@
                                 <rect key="frame" x="827" y="618" width="255" height="32"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Quarter" id="YZO-Gi-Vlt">
-                                    <font key="font" metaFont="system" size="24"/>
+                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
