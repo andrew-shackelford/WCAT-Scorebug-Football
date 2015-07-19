@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		490577CA1B5B477F0025D346 /* AdobeHeitiStd-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 490577C91B5B477F0025D346 /* AdobeHeitiStd-Regular.otf */; };
 		490577CC1B5B487A0025D346 /* AdobeHeitiStd-Regular.otf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 490577C91B5B477F0025D346 /* AdobeHeitiStd-Regular.otf */; };
 		494DF2BD1AFEE7F900D3B9E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 494DF2BC1AFEE7F900D3B9E0 /* AppDelegate.m */; };
 		494DF2BF1AFEE7F900D3B9E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 494DF2BE1AFEE7F900D3B9E0 /* main.m */; };
@@ -219,7 +218,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				490577CA1B5B477F0025D346 /* AdobeHeitiStd-Regular.otf in Resources */,
 				498500721B532B8C00CC09A0 /* scoreboard_example.png in Resources */,
 				498500751B532FA800CC09A0 /* new replay graphic.001.jpg in Resources */,
 				494DF2C11AFEE7F900D3B9E0 /* Images.xcassets in Resources */,
