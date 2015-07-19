@@ -43,7 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		490577C91B5B477F0025D346 /* AdobeHeitiStd-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AdobeHeitiStd-Regular.otf"; sourceTree = "<group>"; };
+		490577C91B5B477F0025D346 /* AdobeHeitiStd-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AdobeHeitiStd-Regular.otf"; path = "../AdobeHeitiStd-Regular.otf"; sourceTree = "<group>"; };
 		494DF2B61AFEE7F900D3B9E0 /* Football Scorebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Football Scorebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		494DF2BA1AFEE7F900D3B9E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		494DF2BB1AFEE7F900D3B9E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
