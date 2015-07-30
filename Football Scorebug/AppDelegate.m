@@ -33,6 +33,8 @@ int quarter;
 int timeSeconds;
 int down;
 int distance;
+int awaySeed;
+int homeSeed;
 
 bool andGoal;
 bool justDown;
@@ -91,6 +93,18 @@ NSString *replayHide;
         awayRecord = [input3 stringValue];
     }
     
+    NSAlert *alert6 = [[NSAlert alloc] init];
+    [alert6 setMessageText:@"Enter in the away seed below (if desired). If not, don't enter anything."];
+    [alert6 addButtonWithTitle:@"Ok"];
+    NSTextField *input6 = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 200, 24)];
+    [input6 setStringValue:@""];
+    [alert6 setAccessoryView:input6];
+    NSInteger button6 = [alert6 runModal];
+    if (button6 == NSAlertFirstButtonReturn) {
+        awaySeed = [[input6 stringValue] intValue];
+    }
+    
+    
     NSAlert *alert2 = [[NSAlert alloc] init];
     [alert2 setMessageText:@"Enter in the home name below"];
     [alert2 addButtonWithTitle:@"Ok"];
@@ -113,6 +127,17 @@ NSString *replayHide;
         homeRecord = [input4 stringValue];
     }
     
+    NSAlert *alert7 = [[NSAlert alloc] init];
+    [alert7 setMessageText:@"Enter in the home seed below (if desired). If not, don't enter anything."];
+    [alert7 addButtonWithTitle:@"Ok"];
+    NSTextField *input7 = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 200, 24)];
+    [input7 setStringValue:@""];
+    [alert7 setAccessoryView:input7];
+    NSInteger button7 = [alert7 runModal];
+    if (button7 == NSAlertFirstButtonReturn) {
+        homeSeed = [[input7 stringValue] intValue];
+    }
+    
     NSAlert *alert5 = [[NSAlert alloc] init];
     [alert5 setMessageText:@"Enter in the location name below"];
     [alert5 addButtonWithTitle:@"Ok"];
@@ -123,6 +148,7 @@ NSString *replayHide;
     if (button5 == NSAlertFirstButtonReturn) {
         location = [input5 stringValue];
     }
+
     
     [_awayNameDisplay setStringValue:awayName];
     [_homeNameDisplay setStringValue:homeName];
@@ -134,6 +160,38 @@ NSString *replayHide;
     replayShowing = true;
     [self showReplay:self];
     replayShowing = false;
+    
+    if (homeSeed != 0 && awaySeed != 0) {
+        [self makeSeedStrings];
+    } else {
+        [_awaySeed setStringValue:@""];
+        [_homeSeed setStringValue:@""];
+    }
+    
+}
+
+- (void)makeSeedStrings {
+    
+    CGSize awayStringSize = [awayName sizeWithAttributes:[NSDictionary dictionaryWithObject:[NSFont fontWithName:@"Adobe Heiti Std" size:35.0f] forKey:NSFontAttributeName]];
+    
+    float awayStringWidth = awayStringSize.width;
+    
+    NSRect awayBounds = NSMakeRect(587.5-awayStringWidth/2 - 33, 188, 50, 50);
+    
+    [_awaySeed setFrame:awayBounds];
+    
+    [_awaySeed setStringValue:[NSString stringWithFormat:@"%d", awaySeed]];
+    
+    CGSize homeStringSize = [homeName sizeWithAttributes:[NSDictionary dictionaryWithObject:[NSFont fontWithName:@"Adobe Heiti Std" size:35.0f] forKey:NSFontAttributeName]];
+    
+    float homeStringWidth = homeStringSize.width;
+    
+    NSRect homeBounds = NSMakeRect(931-homeStringWidth/2 - 33, 188, 50, 50);
+    
+    [_homeSeed setFrame:homeBounds];
+    
+    [_homeSeed setStringValue:[NSString stringWithFormat:@"%d", homeSeed]];
+    
     
 }
 
@@ -153,6 +211,9 @@ NSString *replayHide;
     scorebugShowing = true;
     scoreboardShowing = false;
     locatorShowing = false;
+    
+    awaySeed = 0;
+    homeSeed = 0;
     
     [_timeoutControl setStringValue:@"Hidden"];
     [_touchdownControl setStringValue:@"Hidden"];

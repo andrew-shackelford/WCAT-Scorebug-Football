@@ -17,6 +17,7 @@
                 <outlet property="awayNameDisplay" destination="RgH-wS-gsl" id="cIp-Gs-hL2"/>
                 <outlet property="awayScoreControl" destination="Tt8-2y-ueA" id="NaZ-xA-J7u"/>
                 <outlet property="awayScoreDisplay" destination="Sn3-4c-B8R" id="6Aj-j9-9Lp"/>
+                <outlet property="awaySeed" destination="7rd-UB-CdE" id="1Pc-Zr-hqy"/>
                 <outlet property="clockButton" destination="c1x-UJ-wNf" id="lJo-3U-hnK"/>
                 <outlet property="clockControl" destination="kru-WF-Wc1" id="9Ww-Eu-VY2"/>
                 <outlet property="clockDisplay" destination="d2b-KT-3GH" id="LGx-Uv-Zsm"/>
@@ -35,6 +36,7 @@
                 <outlet property="homeNameDisplay" destination="pjf-xE-qSS" id="JsH-ej-XQX"/>
                 <outlet property="homeScoreControl" destination="uv2-mo-f5h" id="qya-1z-csx"/>
                 <outlet property="homeScoreDisplay" destination="gyd-fI-Hc0" id="6zo-MQ-yzo"/>
+                <outlet property="homeSeed" destination="X3Y-DM-RB4" id="vEl-Bi-l2x"/>
                 <outlet property="locatorAwayName" destination="w9c-l0-rZa" id="VNz-P9-6qz"/>
                 <outlet property="locatorAwayScore" destination="bSJ-f5-qpO" id="N3Q-cC-jql"/>
                 <outlet property="locatorHomeName" destination="GhB-69-ZB1" id="eZw-s1-OUw"/>
@@ -1372,7 +1374,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <rect key="contentRect" x="283" y="305" width="1920" height="1080"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <value key="minSize" type="size" width="1920" height="1080"/>
             <value key="maxSize" type="size" width="1920" height="1080"/>
             <view key="contentView" id="N1D-iC-c6a">
@@ -1390,7 +1392,7 @@
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="scoreboard_example" id="mM8-wG-cjz"/>
                     </imageView>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nip-Kn-Qyw" userLabel="scorebug background">
-                        <rect key="frame" x="500" y="115" width="1333" height="46"/>
+                        <rect key="frame" x="293" y="115" width="1333" height="46"/>
                         <animations/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="scorebug_template" id="dA2-eX-gGd"/>
                     </imageView>
@@ -1398,28 +1400,46 @@
                         <rect key="frame" x="0.0" y="-100" width="1920" height="1080"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RgH-wS-gsl">
-                                <rect key="frame" x="688" y="223" width="159" height="32"/>
+                                <rect key="frame" x="450" y="195" width="275" height="60"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Away Name" id="Ggm-MO-XAM">
-                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
+                                    <font key="font" size="35" name="AdobeHeitiStd-Regular"/>
+                                    <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7rd-UB-CdE">
+                                <rect key="frame" x="500" y="300" width="275" height="60"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Away Seed" id="bt0-dZ-HG9">
+                                    <font key="font" size="20" name="AdobeHeitiStd-Regular"/>
+                                    <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X3Y-DM-RB4">
+                                <rect key="frame" x="800" y="300" width="275" height="60"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Home Seed" id="f95-ae-akL">
+                                    <font key="font" size="20" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sn3-4c-B8R">
-                                <rect key="frame" x="851" y="223" width="159" height="32"/>
+                                <rect key="frame" x="719" y="195" width="80" height="60"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Away Score" id="hQX-Tk-VI0">
-                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
+                                    <font key="font" size="35" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pjf-xE-qSS">
-                                <rect key="frame" x="1008" y="223" width="159" height="32"/>
+                                <rect key="frame" x="794" y="195" width="274" height="60"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Home Name" id="TuA-nT-28z">
-                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
+                                    <font key="font" size="35" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1436,10 +1456,10 @@
                                 </buttonCell>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gyd-fI-Hc0">
-                                <rect key="frame" x="1171" y="223" width="159" height="32"/>
+                                <rect key="frame" x="1064" y="195" width="79" height="60"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Home Score" id="oDQ-uh-jux">
-                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
+                                    <font key="font" size="35" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1481,28 +1501,28 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9bt-ON-ZgG">
-                                <rect key="frame" x="1327" y="223" width="220" height="32"/>
+                                <rect key="frame" x="1138" y="195" width="196" height="60"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Down and Distance" id="7nQ-qJ-MNG">
-                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
+                                    <font key="font" size="35" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tYJ-wf-Qyj">
-                                <rect key="frame" x="1556" y="223" width="109" height="32"/>
+                                <rect key="frame" x="1330" y="195" width="151" height="60"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Quarter" id="HLV-ck-pFo">
-                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
+                                    <font key="font" size="35" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d2b-KT-3GH">
-                                <rect key="frame" x="1681" y="223" width="109" height="32"/>
+                                <rect key="frame" x="1476" y="195" width="150" height="60"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Clock" id="0Om-E0-mey">
-                                    <font key="font" size="24" name="AdobeHeitiStd-Regular"/>
+                                    <font key="font" size="35" name="AdobeHeitiStd-Regular"/>
                                     <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1516,7 +1536,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HtW-sH-DSG">
+                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HtW-sH-DSG">
                                 <rect key="frame" x="0.0" y="125" width="1920" height="200"/>
                                 <animations/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="new replay graphic.001" id="rFA-A7-ACD"/>

@@ -114,5 +114,10 @@
 
 @property (weak) IBOutlet NSImageView *replayImage;
 
+@property (weak) IBOutlet NSTextField *awaySeed;
+@property (weak) IBOutlet NSTextField *homeSeed;
+
+
+
 @end
 
