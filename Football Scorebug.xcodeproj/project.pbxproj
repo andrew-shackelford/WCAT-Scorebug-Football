@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		490577CC1B5B487A0025D346 /* AdobeHeitiStd-Regular.otf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 490577C91B5B477F0025D346 /* AdobeHeitiStd-Regular.otf */; };
+		4925F9491B7674F000067971 /* Scoreboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 4925F9481B7674F000067971 /* Scoreboard.png */; };
 		494DF2BD1AFEE7F900D3B9E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 494DF2BC1AFEE7F900D3B9E0 /* AppDelegate.m */; };
 		494DF2BF1AFEE7F900D3B9E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 494DF2BE1AFEE7F900D3B9E0 /* main.m */; };
 		494DF2C11AFEE7F900D3B9E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494DF2C01AFEE7F900D3B9E0 /* Images.xcassets */; };
@@ -16,6 +17,7 @@
 		498500721B532B8C00CC09A0 /* scoreboard_example.png in Resources */ = {isa = PBXBuildFile; fileRef = 498500701B532B8C00CC09A0 /* scoreboard_example.png */; };
 		498500731B532B8C00CC09A0 /* scorebug_template.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 498500711B532B8C00CC09A0 /* scorebug_template.jpg */; };
 		498500751B532FA800CC09A0 /* new replay graphic.001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 498500741B532FA800CC09A0 /* new replay graphic.001.jpg */; };
+		49A708C21B758F43000379C7 /* Scorebug_Gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A708C11B758F43000379C7 /* Scorebug_Gradient.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		490577C91B5B477F0025D346 /* AdobeHeitiStd-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AdobeHeitiStd-Regular.otf"; path = "../AdobeHeitiStd-Regular.otf"; sourceTree = "<group>"; };
+		4925F9481B7674F000067971 /* Scoreboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Scoreboard.png; sourceTree = "<group>"; };
 		494DF2B61AFEE7F900D3B9E0 /* Football Scorebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Football Scorebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		494DF2BA1AFEE7F900D3B9E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		494DF2BB1AFEE7F900D3B9E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		498500701B532B8C00CC09A0 /* scoreboard_example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scoreboard_example.png; path = "Football Scorebug/backgrounds/scoreboard_example.png"; sourceTree = "<group>"; };
 		498500711B532B8C00CC09A0 /* scorebug_template.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = scorebug_template.jpg; path = "Football Scorebug/backgrounds/scorebug_template.jpg"; sourceTree = "<group>"; };
 		498500741B532FA800CC09A0 /* new replay graphic.001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "new replay graphic.001.jpg"; sourceTree = "<group>"; };
+		49A708C11B758F43000379C7 /* Scorebug_Gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Scorebug_Gradient.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 				498500701B532B8C00CC09A0 /* scoreboard_example.png */,
 				498500741B532FA800CC09A0 /* new replay graphic.001.jpg */,
 				498500711B532B8C00CC09A0 /* scorebug_template.jpg */,
+				4925F9481B7674F000067971 /* Scoreboard.png */,
 				494DF2B81AFEE7F900D3B9E0 /* Football Scorebug */,
 				494DF2CC1AFEE7FA00D3B9E0 /* Football ScorebugTests */,
 				494DF2B71AFEE7F900D3B9E0 /* Products */,
@@ -101,6 +106,7 @@
 		494DF2B81AFEE7F900D3B9E0 /* Football Scorebug */ = {
 			isa = PBXGroup;
 			children = (
+				49A708C11B758F43000379C7 /* Scorebug_Gradient.png */,
 				494DF2BB1AFEE7F900D3B9E0 /* AppDelegate.h */,
 				494DF2BC1AFEE7F900D3B9E0 /* AppDelegate.m */,
 				494DF2C01AFEE7F900D3B9E0 /* Images.xcassets */,
@@ -221,6 +227,8 @@
 				498500721B532B8C00CC09A0 /* scoreboard_example.png in Resources */,
 				498500751B532FA800CC09A0 /* new replay graphic.001.jpg in Resources */,
 				494DF2C11AFEE7F900D3B9E0 /* Images.xcassets in Resources */,
+				4925F9491B7674F000067971 /* Scoreboard.png in Resources */,
+				49A708C21B758F43000379C7 /* Scorebug_Gradient.png in Resources */,
 				494DF2C41AFEE7F900D3B9E0 /* MainMenu.xib in Resources */,
 				498500731B532B8C00CC09A0 /* scorebug_template.jpg in Resources */,
 			);

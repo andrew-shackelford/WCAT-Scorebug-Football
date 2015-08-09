@@ -27,6 +27,8 @@ bool scorebugShowing;
 bool locatorShowing;
 bool scoreboardShowing;
 
+bool validSeeds;
+
 int homeScore;
 int awayScore;
 int quarter;
@@ -59,6 +61,8 @@ NSString *location;
 
 NSString *replayHide;
 
+NSString *dateText;
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
     [self setStartingValues];
@@ -70,6 +74,25 @@ NSString *replayHide;
     [_displayWindow miniaturize:self];
     [_controlWindow deminiaturize:self];
     [_displayWindow deminiaturize:self];
+    
+    validSeeds = false;
+
+    NSApplicationPresentationOptions opts = [[NSApplication sharedApplication ] presentationOptions];
+    if (opts & NSApplicationPresentationFullScreen) {
+        [_displayWindow toggleFullScreen:nil];
+    }
+    
+    NSDateFormatter *fullDate = [[NSDateFormatter alloc] init];
+    [fullDate setDateFormat:@"LLLL d, y"];
+    dateText = [fullDate stringFromDate:[NSDate date]];
+    
+    scoreboardShowing = true;
+    [self concealScoreboard];
+    scoreboardShowing = false;
+    
+    replayShowing = true;
+    [self showReplay:self];
+    replayShowing = false;
     
     NSAlert *alert = [[NSAlert alloc] init];
     [alert setMessageText:@"Enter in the away name below"];
@@ -153,19 +176,14 @@ NSString *replayHide;
     [_awayNameDisplay setStringValue:awayName];
     [_homeNameDisplay setStringValue:homeName];
     
-    scoreboardShowing = true;
-    [self concealScoreboard];
-    scoreboardShowing = false;
-    
-    replayShowing = true;
-    [self showReplay:self];
-    replayShowing = false;
     
     if (homeSeed != 0 && awaySeed != 0) {
         [self makeSeedStrings];
+        validSeeds = true;
     } else {
         [_awaySeed setStringValue:@""];
         [_homeSeed setStringValue:@""];
+        validSeeds = false;
     }
     
 }
@@ -176,7 +194,7 @@ NSString *replayHide;
     
     float awayStringWidth = awayStringSize.width;
     
-    NSRect awayBounds = NSMakeRect(587.5-awayStringWidth/2 - 33, 188, 50, 50);
+    NSRect awayBounds = NSMakeRect(585.5-awayStringWidth/2 - 33, 188, 50, 50);
     
     [_awaySeed setFrame:awayBounds];
     
@@ -186,7 +204,7 @@ NSString *replayHide;
     
     float homeStringWidth = homeStringSize.width;
     
-    NSRect homeBounds = NSMakeRect(931-homeStringWidth/2 - 33, 188, 50, 50);
+    NSRect homeBounds = NSMakeRect(933-homeStringWidth/2 - 33, 188, 50, 50);
     
     [_homeSeed setFrame:homeBounds];
     
@@ -253,6 +271,10 @@ NSString *replayHide;
     [_locatorHomeName setStringValue:@""];
     [_locatorHomeScore setStringValue:@""];
     [_locatorQuarter setStringValue:@""];
+    [_locatorAwaySeed setStringValue:@""];
+    [_locatorHomeSeed setStringValue:@""];
+    [_date setStringValue:@""];
+    [_location setStringValue:@""];
 }
 
 - (NSString*)getTimeString:(int)timeSeconds {
@@ -802,7 +824,10 @@ NSString *replayHide;
         [_locatorHomeScore setStringValue:@""];
         [_locatorAwayName setStringValue:@""];
         [_locatorAwayScore setStringValue:@""];
-        [_locatorQuarter setStringValue:@""];
+        [_date setStringValue:@""];
+        [_location setStringValue:@""];
+        [_locatorHomeSeed setStringValue:@""];
+        [_locatorAwaySeed setStringValue:@""];
         [_locatorShowingControl setTextColor:black];
         [_locatorShowingControl setStringValue:@"Hidden"];
         [_showLocatorButton setTitle:@"Show Locator"];
@@ -821,7 +846,12 @@ NSString *replayHide;
         [_locatorHomeScore setStringValue:homeRecord];
         [_locatorAwayName setStringValue:awayName];
         [_locatorAwayScore setStringValue:awayRecord];
-        [_locatorQuarter setStringValue:location];
+        [_location setStringValue:location];
+        [_date setStringValue:dateText];
+        if (validSeeds) {
+            [_locatorAwaySeed setStringValue:[NSString stringWithFormat:@"%d", awaySeed]];
+            [_locatorHomeSeed setStringValue:[NSString stringWithFormat:@"%d", homeSeed]];
+        }
         [_locatorShowingControl setTextColor:red];
         [_locatorShowingControl setStringValue:@"Showing"];
         [_showLocatorButton setTitle:@"Hide Locator"];
@@ -839,6 +869,8 @@ NSString *replayHide;
         [_locatorAwayName setStringValue:@""];
         [_locatorAwayScore setStringValue:@""];
         [_locatorQuarter setStringValue:@""];
+        [_locatorAwaySeed setStringValue:@""];
+        [_locatorHomeSeed setStringValue:@""];
         [_showScoreboardButton setTitle:@"Show Scoreboard"];
         [_scoreboardShowingControl setStringValue:@"Hidden"];
         [_scoreboardShowingControl setTextColor:black];
@@ -886,6 +918,10 @@ NSString *replayHide;
         } else if (quarter == 14) {
             [_locatorQuarter setStringValue:@"Final/2 Overtime"];
         }
+        if (validSeeds) {
+            [_locatorAwaySeed setStringValue:[NSString stringWithFormat:@"%d", awaySeed]];
+            [_locatorHomeSeed setStringValue:[NSString stringWithFormat:@"%d", homeSeed]];
+        }
         [_showScoreboardButton setTitle:@"Hide Scoreboard"];
         [_scoreboardShowingControl setStringValue:@"Showing"];
         [_scoreboardShowingControl setTextColor:red];
@@ -903,6 +939,8 @@ NSString *replayHide;
         [_quarterDisplay setHidden:YES];
         [_clockDisplay setHidden:YES];
         [_scorebugBackground setHidden:YES];
+        [_awaySeed setHidden:YES];
+        [_homeSeed setHidden:YES];
     } else {
         [_awayNameDisplay setHidden:NO];
         [_awayScoreDisplay setHidden:NO];
@@ -912,6 +950,8 @@ NSString *replayHide;
         [_quarterDisplay setHidden:NO];
         [_clockDisplay setHidden:NO];
         [_scorebugBackground setHidden:NO];
+        [_awaySeed setHidden:NO];
+        [_homeSeed setHidden:NO];
     }
 
 }
@@ -924,6 +964,10 @@ NSString *replayHide;
         [_locatorHomeScore setHidden:YES];
         [_locatorQuarter setHidden:YES];
         [_scoreboardBackground setHidden:YES];
+        [_location setHidden:YES];
+        [_date setHidden:YES];
+        [_locatorAwaySeed setHidden:YES];
+        [_locatorHomeSeed setHidden:YES];
     } else {
         [_locatorAwayName setHidden:NO];
         [_locatorAwayScore setHidden:NO];
@@ -931,6 +975,10 @@ NSString *replayHide;
         [_locatorHomeScore setHidden:NO];
         [_locatorQuarter setHidden:NO];
         [_scoreboardBackground setHidden:NO];
+        [_location setHidden:NO];
+        [_date setHidden:NO];
+        [_locatorAwaySeed setHidden:NO];
+        [_locatorHomeSeed setHidden:NO];
     }
     
 }

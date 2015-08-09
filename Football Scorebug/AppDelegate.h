@@ -117,6 +117,14 @@
 @property (weak) IBOutlet NSTextField *awaySeed;
 @property (weak) IBOutlet NSTextField *homeSeed;
 
+@property (weak) IBOutlet NSTextField *location;
+@property (weak) IBOutlet NSTextField *date;
+
+
+@property (weak) IBOutlet NSTextField *locatorHomeSeed;
+@property (weak) IBOutlet NSTextField *locatorAwaySeed;
+
+
 
 
 @end
