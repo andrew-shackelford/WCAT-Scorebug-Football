@@ -67,6 +67,7 @@
 		498500701B532B8C00CC09A0 /* scoreboard_example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scoreboard_example.png; path = "Football Scorebug/backgrounds/scoreboard_example.png"; sourceTree = "<group>"; };
 		498500711B532B8C00CC09A0 /* scorebug_template.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = scorebug_template.jpg; path = "Football Scorebug/backgrounds/scorebug_template.jpg"; sourceTree = "<group>"; };
 		498500741B532FA800CC09A0 /* new replay graphic.001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "new replay graphic.001.jpg"; sourceTree = "<group>"; };
+		4999666C1B785A090006AAA6 /* Football Scorebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Football Scorebug.entitlements"; sourceTree = "<group>"; };
 		49A708C11B758F43000379C7 /* Scorebug_Gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Scorebug_Gradient.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +119,7 @@
 		494DF2B81AFEE7F900D3B9E0 /* Football Scorebug */ = {
 			isa = PBXGroup;
 			children = (
+				4999666C1B785A090006AAA6 /* Football Scorebug.entitlements */,
 				49A708C11B758F43000379C7 /* Scorebug_Gradient.png */,
 				494DF2BB1AFEE7F900D3B9E0 /* AppDelegate.h */,
 				494DF2BC1AFEE7F900D3B9E0 /* AppDelegate.m */,
@@ -205,6 +207,11 @@
 					494DF2B51AFEE7F900D3B9E0 = {
 						CreatedOnToolsVersion = 6.3;
 						DevelopmentTeam = HGZ47EU989;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					494DF2C81AFEE7FA00D3B9E0 = {
 						CreatedOnToolsVersion = 6.3;
@@ -382,6 +389,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Football Scorebug/Football Scorebug.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -397,6 +405,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Football Scorebug/Football Scorebug.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
