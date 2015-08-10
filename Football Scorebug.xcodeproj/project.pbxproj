@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		490577CC1B5B487A0025D346 /* AdobeHeitiStd-Regular.otf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 490577C91B5B477F0025D346 /* AdobeHeitiStd-Regular.otf */; };
+		490B144A1B77AA3100510FD7 /* flag.001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 490B14471B77AA3100510FD7 /* flag.001.jpg */; };
+		490B144B1B77AA3100510FD7 /* timeout.001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 490B14481B77AA3100510FD7 /* timeout.001.jpg */; };
+		490B144C1B77AA3100510FD7 /* touchdown.001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 490B14491B77AA3100510FD7 /* touchdown.001.jpg */; };
+		492221C31B76F72A0044D28D /* b954ef915193fb9f in Resources */ = {isa = PBXBuildFile; fileRef = 492221C21B76F72A0044D28D /* b954ef915193fb9f */; };
 		4925F9491B7674F000067971 /* Scoreboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 4925F9481B7674F000067971 /* Scoreboard.png */; };
 		494DF2BD1AFEE7F900D3B9E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 494DF2BC1AFEE7F900D3B9E0 /* AppDelegate.m */; };
 		494DF2BF1AFEE7F900D3B9E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 494DF2BE1AFEE7F900D3B9E0 /* main.m */; };
@@ -45,6 +49,10 @@
 
 /* Begin PBXFileReference section */
 		490577C91B5B477F0025D346 /* AdobeHeitiStd-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AdobeHeitiStd-Regular.otf"; path = "../AdobeHeitiStd-Regular.otf"; sourceTree = "<group>"; };
+		490B14471B77AA3100510FD7 /* flag.001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flag.001.jpg; sourceTree = "<group>"; };
+		490B14481B77AA3100510FD7 /* timeout.001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timeout.001.jpg; sourceTree = "<group>"; };
+		490B14491B77AA3100510FD7 /* touchdown.001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = touchdown.001.jpg; sourceTree = "<group>"; };
+		492221C21B76F72A0044D28D /* b954ef915193fb9f */ = {isa = PBXFileReference; lastKnownFileType = folder; path = b954ef915193fb9f; sourceTree = "<group>"; };
 		4925F9481B7674F000067971 /* Scoreboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Scoreboard.png; sourceTree = "<group>"; };
 		494DF2B61AFEE7F900D3B9E0 /* Football Scorebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Football Scorebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		494DF2BA1AFEE7F900D3B9E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,9 +91,13 @@
 		494DF2AD1AFEE7F900D3B9E0 = {
 			isa = PBXGroup;
 			children = (
+				492221C21B76F72A0044D28D /* b954ef915193fb9f */,
 				490577C91B5B477F0025D346 /* AdobeHeitiStd-Regular.otf */,
 				498500701B532B8C00CC09A0 /* scoreboard_example.png */,
 				498500741B532FA800CC09A0 /* new replay graphic.001.jpg */,
+				490B14471B77AA3100510FD7 /* flag.001.jpg */,
+				490B14481B77AA3100510FD7 /* timeout.001.jpg */,
+				490B14491B77AA3100510FD7 /* touchdown.001.jpg */,
 				498500711B532B8C00CC09A0 /* scorebug_template.jpg */,
 				4925F9481B7674F000067971 /* Scoreboard.png */,
 				494DF2B81AFEE7F900D3B9E0 /* Football Scorebug */,
@@ -226,10 +238,14 @@
 			files = (
 				498500721B532B8C00CC09A0 /* scoreboard_example.png in Resources */,
 				498500751B532FA800CC09A0 /* new replay graphic.001.jpg in Resources */,
+				492221C31B76F72A0044D28D /* b954ef915193fb9f in Resources */,
 				494DF2C11AFEE7F900D3B9E0 /* Images.xcassets in Resources */,
 				4925F9491B7674F000067971 /* Scoreboard.png in Resources */,
 				49A708C21B758F43000379C7 /* Scorebug_Gradient.png in Resources */,
+				490B144A1B77AA3100510FD7 /* flag.001.jpg in Resources */,
+				490B144C1B77AA3100510FD7 /* touchdown.001.jpg in Resources */,
 				494DF2C41AFEE7F900D3B9E0 /* MainMenu.xib in Resources */,
+				490B144B1B77AA3100510FD7 /* timeout.001.jpg in Resources */,
 				498500731B532B8C00CC09A0 /* scorebug_template.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,10 +335,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.9;
 			};
 			name = Debug;
 		};
@@ -356,9 +372,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.9;
 			};
 			name = Release;
 		};
@@ -366,12 +382,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Football Scorebug/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -379,12 +397,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Football Scorebug/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

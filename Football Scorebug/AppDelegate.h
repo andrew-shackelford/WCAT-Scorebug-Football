@@ -124,6 +124,7 @@
 @property (weak) IBOutlet NSTextField *locatorHomeSeed;
 @property (weak) IBOutlet NSTextField *locatorAwaySeed;
 
+@property (weak) IBOutlet NSImageView *flagImage;
 
 
 

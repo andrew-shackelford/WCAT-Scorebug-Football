@@ -76,11 +76,6 @@ NSString *dateText;
     [_displayWindow deminiaturize:self];
     
     validSeeds = false;
-
-    NSApplicationPresentationOptions opts = [[NSApplication sharedApplication ] presentationOptions];
-    if (opts & NSApplicationPresentationFullScreen) {
-        [_displayWindow toggleFullScreen:nil];
-    }
     
     NSDateFormatter *fullDate = [[NSDateFormatter alloc] init];
     [fullDate setDateFormat:@"LLLL d, y"];
@@ -275,6 +270,11 @@ NSString *dateText;
     [_locatorHomeSeed setStringValue:@""];
     [_date setStringValue:@""];
     [_location setStringValue:@""];
+    
+    [_flagImage setHidden:YES];
+    flagShowing = false;
+    touchdownShowing = false;
+    timeoutShowing = false;
 }
 
 - (NSString*)getTimeString:(int)timeSeconds {
@@ -481,12 +481,90 @@ NSString *dateText;
 }
 
 - (IBAction)showTimeout:(id)sender {
+    if (locatorShowing || scoreboardShowing) {
+        
+    } else if (scorebugShowing) {
+        if (timeoutShowing) {
+            [_flagImage setHidden:YES];
+            timeoutShowing = false;
+            [_timeoutControl setStringValue:@"Hidden"];
+            [_timeoutControl setTextColor:black];
+            [_timeoutButton setTitle:@"Show Timeout"];
+        } else {
+            [_flagImage setImage:[NSImage imageNamed:@"timeout.001.jpg"]];
+            [_flagImage setHidden:NO];
+            timeoutShowing = true;
+            flagShowing = false;
+            touchdownShowing = false;
+            [_timeoutControl setStringValue:@"Showing"];
+            [_timeoutControl setTextColor:red];
+            [_flagControl setStringValue:@"Hidden"];
+            [_flagControl setTextColor:black];
+            [_touchdownControl setStringValue:@"Hidden"];
+            [_touchdownControl setTextColor:black];
+            [_touchdownButton setTitle:@"Show Touchdown"];
+            [_flagButton setTitle:@"Show Flag"];
+            [_timeoutButton setTitle:@"Hide Timeout"];
+        }
+    }
 }
 
 - (IBAction)showFlag:(id)sender {
+    if (locatorShowing || scoreboardShowing) {
+        
+    } else if (scorebugShowing) {
+        if (flagShowing) {
+            [_flagImage setHidden:YES];
+            flagShowing = false;
+            [_flagControl setStringValue:@"Hidden"];
+            [_flagControl setTextColor:black];
+            [_flagButton setTitle:@"Show Flag"];
+        } else {
+            [_flagImage setImage:[NSImage imageNamed:@"flag.001.jpg"]];
+            [_flagImage setHidden:NO];
+            timeoutShowing = false;
+            flagShowing = true;
+            touchdownShowing = false;
+            [_timeoutControl setStringValue:@"Hidden"];
+            [_timeoutControl setTextColor:black];
+            [_flagControl setStringValue:@"Showing"];
+            [_flagControl setTextColor:red];
+            [_touchdownControl setStringValue:@"Hidden"];
+            [_touchdownControl setTextColor:black];
+            [_touchdownButton setTitle:@"Show Touchdown"];
+            [_flagButton setTitle:@"Hide Flag"];
+            [_timeoutButton setTitle:@"Show Timeout"];
+        }
+    }
 }
 
 - (IBAction)showTouchdown:(id)sender {
+    if (locatorShowing || scoreboardShowing) {
+        
+    } else if (scorebugShowing) {
+        if (touchdownShowing) {
+            [_flagImage setHidden:YES];
+            touchdownShowing = false;
+            [_touchdownControl setStringValue:@"Hidden"];
+            [_touchdownControl setTextColor:black];
+            [_touchdownButton setTitle:@"Show Touchdown"];
+        } else {
+            [_flagImage setImage:[NSImage imageNamed:@"touchdown.001.jpg"]];
+            [_flagImage setHidden:NO];
+            timeoutShowing = false;
+            flagShowing = false;
+            touchdownShowing = true;
+            [_timeoutControl setStringValue:@"Hidden"];
+            [_timeoutControl setTextColor:black];
+            [_flagControl setStringValue:@"Hidden"];
+            [_flagControl setTextColor:black];
+            [_touchdownControl setStringValue:@"Showing"];
+            [_touchdownControl setTextColor:red];
+            [_touchdownButton setTitle:@"Hide Touchdown"];
+            [_flagButton setTitle:@"Show Flag"];
+            [_timeoutButton setTitle:@"Show Timeout"];
+        }
+    }
 }
 
 - (IBAction)startClock:(id)sender {
@@ -551,7 +629,7 @@ NSString *dateText;
         clockShowing = true;
         [_clockShowingControl setStringValue:@"Showing"];
         [_clockShowingControl setTextColor:green];
-        [_clockButton setTitle:@"Show Clock"];
+        [_clockButton setTitle:@"Hide Clock"];
         [self updateDisplayClock];
     }
 }
@@ -941,6 +1019,16 @@ NSString *dateText;
         [_scorebugBackground setHidden:YES];
         [_awaySeed setHidden:YES];
         [_homeSeed setHidden:YES];
+        [_flagImage setHidden:YES];
+        [_timeoutControl setStringValue:@"Hidden"];
+        [_timeoutControl setTextColor:black];
+        [_flagControl setStringValue:@"Hidden"];
+        [_flagControl setTextColor:black];
+        [_touchdownControl setStringValue:@"Hidden"];
+        [_touchdownControl setTextColor:black];
+        [_touchdownButton setTitle:@"Show Touchdown"];
+        [_flagButton setTitle:@"Show Flag"];
+        [_timeoutButton setTitle:@"Show Timeout"];
     } else {
         [_awayNameDisplay setHidden:NO];
         [_awayScoreDisplay setHidden:NO];
