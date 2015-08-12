@@ -178,6 +178,11 @@ NSString *dateText;
         [_homeSeed setStringValue:@""];
         validSeeds = false;
     }
+
+    [_displayWindow makeKeyAndOrderFront:self];
+    [_displayWindow setFrame:NSMakeRect(100.f, 100.f, 640.f, 480.f) display:YES animate:NO];
+    [_controlWindow makeKeyAndOrderFront:self];
+
     
 }
 

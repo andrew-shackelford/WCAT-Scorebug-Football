@@ -1306,57 +1306,50 @@
         <window title="Instructions - Operation" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="ltf-hQ-17a" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="120" y="64" width="276" height="383"/>
+            <rect key="contentRect" x="120" y="64" width="276" height="382"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
-            <value key="minSize" type="size" width="276" height="383"/>
-            <value key="maxSize" type="size" width="276" height="383"/>
+            <value key="minSize" type="size" width="276" height="382"/>
+            <value key="maxSize" type="size" width="276" height="382"/>
             <view key="contentView" id="Dfo-UG-kBy">
-                <rect key="frame" x="0.0" y="0.0" width="276" height="383"/>
+                <rect key="frame" x="0.0" y="0.0" width="276" height="382"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIm-b4-bNO">
-                        <rect key="frame" x="-1" y="0.0" width="278" height="384"/>
-                        <clipView key="contentView" misplaced="YES" id="ZBp-4C-odc">
-                            <rect key="frame" x="1" y="1" width="276" height="367"/>
+                    <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3g-K2-GXo">
+                        <rect key="frame" x="-1" y="0.0" width="278" height="383"/>
+                        <clipView key="contentView" misplaced="YES" id="WLK-C9-Fum">
+                            <rect key="frame" x="1" y="1" width="223" height="133"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textView editable="NO" selectable="NO" importsGraphics="NO" baseWritingDirection="leftToRight" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="hlc-4n-aB8">
-                                    <rect key="frame" x="0.0" y="0.0" width="276" height="378"/>
+                                <textView editable="NO" selectable="NO" importsGraphics="NO" baseWritingDirection="leftToRight" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="buD-cN-qrm">
+                                    <rect key="frame" x="0.0" y="0.0" width="223" height="133"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="276" height="382"/>
+                                    <size key="minSize" width="276" height="381"/>
                                     <size key="maxSize" width="463" height="10000000"/>
                                     <attributedString key="textStorage">
                                         <fragment>
-                                            <mutableString key="content">While all the buttons may look daunting at first, they’re actually very simple. If possible, plug in a labeled keyboard for easier operation. To help you keep track of what’s going on, there are bold labels that will change colors based on the status of the scorebug. When the scorebug isn’t in the default state, labels will change colors. For instance, if the flag is showing, the flag label will change to “Showing” in red font. Similarly, when the Locator or the Scoreboard are showing, the text will change red to draw your attention. It is important to keep in mind that when hiding the scorebug, scoreboard, and locator, the previously showing format won’t reappear. For example, if the scorebug was showing, and you clicked “Show Locator”, the scorebug would disappear and the locator would appear. However, if you then clicked “Hide Locator”, the scorebug would not re-appear. To make the scorebug reappear, you would need to click “Show Scorebug”. This behavior is intentional - it makes it possible to have the locator, scorebug, and scoreboard all hidden at the same time. The one exception to this is replay - the replay graphic will only be shown on top of the scorebug and will be shown and hidden often, thus the different behavior. Otherwise, the rest is self explanatory.
-</mutableString>
+                                            <mutableString key="content">While all the buttons may look daunting at first, they’re actually very simple. If possible, plug in a labeled keyboard for easier operation. To help you keep track of what’s going on, there are bold labels that will change colors based on the status of the scorebug. When the scorebug isn’t in the default state, labels will change colors. For instance, if the flag is showing, the flag label will change to “Showing” in red font. Similarly, when the Locator or the Scoreboard are showing, the text will change red to draw your attention. It is important to keep in mind that when hiding the scorebug, scoreboard, and locator, the previously showing format won’t reappear. For example, if the scorebug was showing, and you clicked “Show Locator”, the scorebug would disappear and the locator would appear. However, if you then clicked “Hide Locator”, the scorebug would not re-appear. To make the scorebug reappear, you would need to click “Show Scorebug”. This behavior is intentional - it makes it possible to have the locator, scorebug, and scoreboard all hidden at the same time. The one exception to this is replay - the replay graphic will only be shown on top of the scorebug and will be shown and hidden often, thus the different behavior. Otherwise, the rest is self explanatory.</mutableString>
                                             <attributes>
                                                 <font key="NSFont" size="12" name="Helvetica"/>
                                                 <real key="NSKern" value="0.0"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0"/>
-                                                <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="276" height="382"/>
+                                    <size key="minSize" width="276" height="381"/>
                                     <size key="maxSize" width="463" height="10000000"/>
                                 </textView>
                             </subviews>
-                            <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </clipView>
-                        <animations/>
-                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="SBN-dN-pmx">
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="FVI-Cp-fXR">
                             <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                             <autoresizingMask key="autoresizingMask"/>
-                            <animations/>
                         </scroller>
-                        <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="R6J-a9-q0U">
-                            <rect key="frame" x="261" y="1" width="16" height="367"/>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="qIF-Qq-IkK">
+                            <rect key="frame" x="224" y="1" width="15" height="133"/>
                             <autoresizingMask key="autoresizingMask"/>
-                            <animations/>
                         </scroller>
                     </scrollView>
                 </subviews>
@@ -1387,6 +1380,53 @@
             </view>
             <point key="canvasLocation" x="2686" y="2084.5"/>
         </window>
+        <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="wIm-b4-bNO">
+            <rect key="frame" x="0.0" y="0.0" width="278" height="384"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <clipView key="contentView" id="ZBp-4C-odc">
+                <rect key="frame" x="1" y="1" width="276" height="367"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <textView editable="NO" selectable="NO" importsGraphics="NO" baseWritingDirection="leftToRight" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="hlc-4n-aB8">
+                        <rect key="frame" x="0.0" y="0.0" width="276" height="378"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <size key="minSize" width="276" height="382"/>
+                        <size key="maxSize" width="463" height="10000000"/>
+                        <attributedString key="textStorage">
+                            <fragment>
+                                <mutableString key="content">While all the buttons may look daunting at first, they’re actually very simple. If possible, plug in a labeled keyboard for easier operation. To help you keep track of what’s going on, there are bold labels that will change colors based on the status of the scorebug. When the scorebug isn’t in the default state, labels will change colors. For instance, if the flag is showing, the flag label will change to “Showing” in red font. Similarly, when the Locator or the Scoreboard are showing, the text will change red to draw your attention. It is important to keep in mind that when hiding the scorebug, scoreboard, and locator, the previously showing format won’t reappear. For example, if the scorebug was showing, and you clicked “Show Locator”, the scorebug would disappear and the locator would appear. However, if you then clicked “Hide Locator”, the scorebug would not re-appear. To make the scorebug reappear, you would need to click “Show Scorebug”. This behavior is intentional - it makes it possible to have the locator, scorebug, and scoreboard all hidden at the same time. The one exception to this is replay - the replay graphic will only be shown on top of the scorebug and will be shown and hidden often, thus the different behavior. Otherwise, the rest is self explanatory.
+</mutableString>
+                                <attributes>
+                                    <font key="NSFont" size="12" name="Helvetica"/>
+                                    <real key="NSKern" value="0.0"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0"/>
+                                    <color key="NSStrokeColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <size key="minSize" width="276" height="382"/>
+                        <size key="maxSize" width="463" height="10000000"/>
+                    </textView>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            </clipView>
+            <animations/>
+            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="SBN-dN-pmx">
+                <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <animations/>
+            </scroller>
+            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="R6J-a9-q0U">
+                <rect key="frame" x="261" y="1" width="16" height="367"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <animations/>
+            </scroller>
+            <point key="canvasLocation" x="2794" y="2733"/>
+        </scrollView>
     </objects>
     <resources>
         <image name="Scoreboard" width="1288.0799560546875" height="837.1199951171875"/>
