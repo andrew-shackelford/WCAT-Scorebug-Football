@@ -113,90 +113,201 @@
                         <items>
                             <menuItem title="Touchdown" keyEquivalent="q" id="P06-2Q-fhv">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="dJn-8h-SBh" id="glt-We-hFq"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Timeout" keyEquivalent="w" id="6iK-VJ-U8T">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="WqW-EM-aPU" id="KTL-lN-zLs"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Flag" keyEquivalent="e" id="ZDM-Dt-KYM">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="C5C-b6-B99" id="xLS-0k-Djf"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Away -1" keyEquivalent="r" id="V4A-tW-IaQ">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="OlJ-bE-Mb0" id="J6T-TD-Q8r"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Away +1" keyEquivalent="t" id="ZPu-K8-PYV">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="WBH-EY-lbg" id="vmw-iM-HgG"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Away +3" keyEquivalent="y" id="U2o-VT-HeF">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="x1B-SU-aX4" id="XNg-aY-ps4"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Away +6" keyEquivalent="u" id="0Ci-lv-2Mw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="BVd-ps-mqk" id="gsg-w3-bFG"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Home +6" keyEquivalent="i" id="fkT-8C-hRK">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="jHd-mK-vBC" id="aQg-NE-sGR"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Home +3" keyEquivalent="o" id="UHi-4S-7HE">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="eQ2-Mz-LEZ" id="07k-J1-0Wb"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Home +1" keyEquivalent="p" id="NpS-B2-9qo">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="hur-ON-A99" id="LQ6-98-iKZ"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Home -1" keyEquivalent="[" id="XbQ-ar-jj5">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="1tl-4N-jYT" id="bLA-Xd-rzT"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Reset Do&amp;D" keyEquivalent="a" id="ZXn-yZ-HaX">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="P3W-AT-7fW" id="7Nz-fc-sMH"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="&amp; Goal" keyEquivalent="s" id="ehL-2S-7h7">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="qq4-u4-57B" id="Lgu-uC-NuJ"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Just Down" keyEquivalent="d" id="AGR-jF-U0r">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="QBN-GW-Pd9" id="nXj-CV-whW"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Update Do&amp;D" keyEquivalent="f" id="aYb-VL-6x5">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="dN2-MA-qvC" id="vrg-12-FG2"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Show Replay" keyEquivalent="g" id="dWp-au-65b">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="F26-Cr-2SO" id="pun-hE-0WG"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Hide Do&amp;D" keyEquivalent="h" id="GOY-tD-OB3">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="Qc5-8E-GL3" id="6NT-GF-OgG"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Hide Clock" keyEquivalent="j" id="Ecg-Xu-oXz">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="c1x-UJ-wNf" id="sLg-ks-vZZ"/>
+                                </connections>
                             </menuItem>
-                            <menuItem title="Hide Scorebug" keyEquivalent="j" id="YG0-Ys-nn1">
+                            <menuItem title="Hide Scorebug" keyEquivalent="k" id="YG0-Ys-nn1">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="UU6-xV-2fN" id="7um-92-wt2"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Show Scoreboard" keyEquivalent="l" id="i9x-Zd-POJ">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="4xq-m9-z3d" id="IaC-sF-i2k"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Show Locator" keyEquivalent=";" id="VFw-Mx-Lrf">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="eQA-H8-fyC" id="l8B-vU-sis"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="- QTR" keyEquivalent="z" id="nEJ-wH-ly1">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="QtR-Mt-sSd" id="P84-3Z-l2G"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="+ QTR" keyEquivalent="x" id="Hgw-17-p35">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="1KX-Zc-iL4" id="N9L-EL-mTo"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Reset Clock" keyEquivalent="c" id="EHc-6e-qhv">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="iql-w0-n1F" id="qst-Ze-sBw"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="-10 Sec" keyEquivalent="v" id="WzU-6f-67V">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="dXN-hI-B6c" id="Bf3-P9-E6P"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="-1 Sec" keyEquivalent="b" id="KEI-Bb-BIV">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="23H-x4-ud2" id="3tg-He-fTN"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="+1 Sec" keyEquivalent="n" id="Nes-b9-Kcq">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="Z2q-AN-sl1" id="JYA-IR-KAK"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="-10 Sec" keyEquivalent="m" id="79j-zI-EJh">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="o1Q-Op-CPi" id="lnD-Wl-RTa"/>
+                                </connections>
                             </menuItem>
                             <menuItem title="Start/Stop Clock" keyEquivalent=" " id="S5P-Hx-hih">
                                 <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="BRW-g9-0xv" id="rLX-Wy-nwu"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="+ Down" keyEquivalent="" id="jdl-xx-ztk">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="cNp-FZ-oL7" id="0oq-Cl-bKC"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="- Down" keyEquivalent="" id="QDY-AD-1IH">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="hhU-xW-3aL" id="c9d-BY-XuZ"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="+ Dist" keyEquivalent="" id="uqf-OA-G9j">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="nIY-KO-7qK" id="XsQ-Dn-uJH"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="- Dist" keyEquivalent="" id="uj2-wB-7eb">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performClick:" target="CM4-8U-w4B" id="jfm-tg-SmP"/>
+                                </connections>
                             </menuItem>
                         </items>
                     </menu>
@@ -548,7 +659,7 @@
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P3W-AT-7fW">
                         <rect key="frame" x="441" y="437" width="147" height="41"/>
                         <animations/>
-                        <buttonCell key="cell" type="bevel" title="Reset Down" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XMv-y0-als">
+                        <buttonCell key="cell" type="bevel" title="Reset Do&amp;D" bezelStyle="regularSquare" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XMv-y0-als">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system" size="20"/>
                         </buttonCell>
@@ -902,7 +1013,7 @@
                         <rect key="frame" x="6" y="-43" width="273" height="113"/>
                         <animations/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Designed by Andrew Shackelford                ©2015 Golden Dog Productions               All Rights Reserved" id="abA-Pl-6gR">
-                            <font key="font" metaFont="system" size="17"/>
+                            <font key="font" size="15" name="HelveticaNeue"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -1195,16 +1306,16 @@
         <window title="Instructions - Operation" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="ltf-hQ-17a" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="120" y="64" width="276" height="367"/>
+            <rect key="contentRect" x="120" y="64" width="276" height="383"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
-            <value key="minSize" type="size" width="276" height="367"/>
-            <value key="maxSize" type="size" width="276" height="367"/>
+            <value key="minSize" type="size" width="276" height="383"/>
+            <value key="maxSize" type="size" width="276" height="383"/>
             <view key="contentView" id="Dfo-UG-kBy">
-                <rect key="frame" x="0.0" y="0.0" width="276" height="367"/>
+                <rect key="frame" x="0.0" y="0.0" width="276" height="383"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIm-b4-bNO">
-                        <rect key="frame" x="-1" y="-1" width="278" height="369"/>
+                        <rect key="frame" x="-1" y="0.0" width="278" height="384"/>
                         <clipView key="contentView" misplaced="YES" id="ZBp-4C-odc">
                             <rect key="frame" x="1" y="1" width="276" height="367"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1214,11 +1325,11 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="276" height="367"/>
+                                    <size key="minSize" width="276" height="382"/>
                                     <size key="maxSize" width="463" height="10000000"/>
                                     <attributedString key="textStorage">
                                         <fragment>
-                                            <mutableString key="content">While all the buttons may look daunting at first, they’re actually very simple. If possible, plug in a labeled keyboard for easier operation. To help you keep track of what’s going on, there are bold labels that will change colors based on the status of the scorebug. When the scorebug isn’t in the default state, labels will change colors. For instance, if the flag is showing, the flag label will change to “Showing” in red font. Similarly, when the Locator or the Scoreboard are showing, the text will change red to draw your attention. It is important to keep in mind that when hiding the scorebug, scoreboard, and locator, the previously showing format won’t reappear. For example, if the scorebug was showing, and you clicked “Show Locator”, the scorebug would disappear and the locator would appear. However, if you then clicked “Hide Locator”, the scorebug would not re-appear. To make the scorebug reappear, you would need to click “Show Scorebug”. This behavior is intentional - it makes it possible to have the locator, scorebug, and scoreboard all hidden at the same time. The one exception to this is replay - the replay graphic will only be shown on top of the scorebug and will be shown and hidden often, thus the different behavior.
+                                            <mutableString key="content">While all the buttons may look daunting at first, they’re actually very simple. If possible, plug in a labeled keyboard for easier operation. To help you keep track of what’s going on, there are bold labels that will change colors based on the status of the scorebug. When the scorebug isn’t in the default state, labels will change colors. For instance, if the flag is showing, the flag label will change to “Showing” in red font. Similarly, when the Locator or the Scoreboard are showing, the text will change red to draw your attention. It is important to keep in mind that when hiding the scorebug, scoreboard, and locator, the previously showing format won’t reappear. For example, if the scorebug was showing, and you clicked “Show Locator”, the scorebug would disappear and the locator would appear. However, if you then clicked “Hide Locator”, the scorebug would not re-appear. To make the scorebug reappear, you would need to click “Show Scorebug”. This behavior is intentional - it makes it possible to have the locator, scorebug, and scoreboard all hidden at the same time. The one exception to this is replay - the replay graphic will only be shown on top of the scorebug and will be shown and hidden often, thus the different behavior. Otherwise, the rest is self explanatory.
 </mutableString>
                                             <attributes>
                                                 <font key="NSFont" size="12" name="Helvetica"/>
@@ -1229,7 +1340,7 @@
                                         </fragment>
                                     </attributedString>
                                     <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <size key="minSize" width="276" height="367"/>
+                                    <size key="minSize" width="276" height="382"/>
                                     <size key="maxSize" width="463" height="10000000"/>
                                 </textView>
                             </subviews>
@@ -1251,7 +1362,7 @@
                 </subviews>
                 <animations/>
             </view>
-            <point key="canvasLocation" x="2347" y="2682.5"/>
+            <point key="canvasLocation" x="2347" y="2690.5"/>
         </window>
         <window title="About Football Scorebug" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="FM9-HU-l6u" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
@@ -1262,20 +1373,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="276" height="81"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jx3-3J-Vic">
-                        <rect key="frame" x="11" y="-15" width="254" height="45"/>
-                        <animations/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Copyright 2015 Golden Dog Productions" id="k8V-DN-kSm">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8py-M5-ux3">
-                        <rect key="frame" x="17" y="26" width="242" height="45"/>
+                        <rect key="frame" x="7" y="6" width="262" height="57"/>
                         <animations/>
-                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Designed by Andrew Shackelford      for use in WCAT television productions" id="yDz-hR-GKJ">
-                            <font key="font" metaFont="system"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Designed by Andrew Shackelford         Copyright 2015 Golden Dog Productions" id="yDz-hR-GKJ">
+                            <font key="font" size="13" name="HelveticaNeue"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>

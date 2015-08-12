@@ -64,16 +64,14 @@ NSString *replayHide;
 NSString *dateText;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    [_displayWindow close];
+    
     // Insert code here to initialize your application
     [self setStartingValues];
     [_displayWindow setCollectionBehavior:NSWindowCollectionBehaviorFullScreenPrimary];
     [_controlWindow makeKeyAndOrderFront:self];
-    [_displayWindow setFrame:NSMakeRect(100.f, 100.f, 640.f, 480.f) display:YES animate:YES];
-    [_controlWindow miniaturize:self];
-    [_displayWindow makeKeyAndOrderFront:self];
-    [_displayWindow miniaturize:self];
-    [_controlWindow deminiaturize:self];
-    [_displayWindow deminiaturize:self];
+    [_displayWindow setFrame:NSMakeRect(100.f, 100.f, 640.f, 480.f) display:YES animate:NO];
+    [_displayWindow makeKeyAndOrderFront:self]; 
     
     validSeeds = false;
     
@@ -884,6 +882,15 @@ NSString *dateText;
 
 - (IBAction)enterFullScreen:(id)sender {
     [_displayWindow toggleFullScreen:nil];
+    
+    if (homeSeed != 0 && awaySeed != 0) {
+        [self makeSeedStrings];
+        validSeeds = true;
+    } else {
+        [_awaySeed setStringValue:@""];
+        [_homeSeed setStringValue:@""];
+        validSeeds = false;
+    }
 }
 
 
@@ -891,6 +898,15 @@ NSString *dateText;
     [_displayFullScreenButton setTransparent:YES];
     [_displayFullScreenButton setEnabled:NO];
     [_displayWindow toggleFullScreen:nil];
+    
+    if (homeSeed != 0 && awaySeed != 0) {
+        [self makeSeedStrings];
+        validSeeds = true;
+    } else {
+        [_awaySeed setStringValue:@""];
+        [_homeSeed setStringValue:@""];
+        validSeeds = false;
+    }
 
 }
 - (IBAction)showLocator:(id)sender {
