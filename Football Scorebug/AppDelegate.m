@@ -288,6 +288,14 @@ NSString *dateText;
     [_animationView setHidden:YES];
     replayDone = YES;
     [_animationTwoView setHidden:YES];
+    
+    NSURL* videoURL = [[NSBundle mainBundle] URLForResource:@"Animation 1" withExtension:@"m4v"];
+    self.animationView.player = [AVPlayer playerWithURL:videoURL];
+    
+    NSURL* videoURLTwo = [[NSBundle mainBundle] URLForResource:@"animation 2" withExtension:@"m4v"];
+    self.animationTwoView.player = [AVPlayer playerWithURL:videoURLTwo];
+    
+    
 }
 
 - (NSString*)getTimeString:(int)timeSeconds {
@@ -619,7 +627,17 @@ NSString *dateText;
     if (replayShowing) {
         if (!replayDone) {
             [_animationView setHidden:YES];
+            [_animationTwoView setHidden:YES];
             [_colorScorebug setHidden:YES];
+            [replayTimer invalidate];
+            replayTimer = nil;
+            [resetTimer invalidate];
+            resetTimer = nil;
+            NSURL* videoURL = [[NSBundle mainBundle] URLForResource:@"Animation 1" withExtension:@"m4v"];
+            self.animationView.player = [AVPlayer playerWithURL:videoURL];
+            NSURL* videoURLTwo = [[NSBundle mainBundle] URLForResource:@"animation 2" withExtension:@"m4v"];
+            self.animationTwoView.player = [AVPlayer playerWithURL:videoURLTwo];
+            replayDone = YES;
         } else {
             [self newReplayEnd];
         }
@@ -630,8 +648,18 @@ NSString *dateText;
     } else {
         if (!replayDone) {
             [_animationView setHidden:YES];
+            [_animationTwoView setHidden:YES];
             [_colorScorebug setHidden:YES];
             replayShowing = false;
+            [resetTimer invalidate];
+            resetTimer = nil;
+            [replayTimer invalidate];
+            replayTimer = nil;
+            NSURL* videoURL = [[NSBundle mainBundle] URLForResource:@"Animation 1" withExtension:@"m4v"];
+            self.animationView.player = [AVPlayer playerWithURL:videoURL];
+            NSURL* videoURLTwo = [[NSBundle mainBundle] URLForResource:@"animation 2" withExtension:@"m4v"];
+            self.animationTwoView.player = [AVPlayer playerWithURL:videoURLTwo];
+            replayDone = YES;
         } else {
             [self newReplayStart];
             replayShowing = true;
@@ -644,9 +672,9 @@ NSString *dateText;
 }
 
 - (void) newReplayStart {
-    
     NSURL* videoURL = [[NSBundle mainBundle] URLForResource:@"Animation 1" withExtension:@"m4v"];
     self.animationView.player = [AVPlayer playerWithURL:videoURL];
+
     
     [_animationView setHidden:NO];
     [[_animationView player] play];
@@ -659,9 +687,8 @@ NSString *dateText;
 
 - (void) newReplayEnd {
     
-    NSURL* videoURL = [[NSBundle mainBundle] URLForResource:@"animation 2" withExtension:@"m4v"];
-    self.animationView.player = [AVPlayer playerWithURL:videoURL];
-    [[_animationView player] play];
+
+    [[_animationTwoView player] play];
     replayDone = NO;
     replayTimer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(replayScorebug) userInfo:self repeats:NO];
 }
@@ -670,16 +697,28 @@ NSString *dateText;
     replayDone = YES;
     [resetTimer invalidate];
     resetTimer = nil;
+
+    [_animationTwoView setHidden:NO];
+    [_animationView setHidden:YES];
     
+    NSURL* videoURL = [[NSBundle mainBundle] URLForResource:@"Animation 1" withExtension:@"m4v"];
+    self.animationView.player = [AVPlayer playerWithURL:videoURL];
     
 }
 
 - (void) replayScorebug {
     replayDone = YES;
     [_animationView setHidden:YES];
+    [_animationTwoView setHidden:YES];
     [_colorScorebug setHidden:YES];
     [replayTimer invalidate];
     replayTimer = nil;
+    
+    NSURL* videoURL = [[NSBundle mainBundle] URLForResource:@"Animation 1" withExtension:@"m4v"];
+    self.animationView.player = [AVPlayer playerWithURL:videoURL];
+    
+    NSURL* videoURLTwo = [[NSBundle mainBundle] URLForResource:@"animation 2" withExtension:@"m4v"];
+    self.animationTwoView.player = [AVPlayer playerWithURL:videoURLTwo];
 }
 
 - (IBAction)hideClock:(id)sender {

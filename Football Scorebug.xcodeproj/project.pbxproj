@@ -12,6 +12,7 @@
 		490B144A1B77AA3100510FD7 /* flag.001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 490B14471B77AA3100510FD7 /* flag.001.jpg */; };
 		490B144B1B77AA3100510FD7 /* timeout.001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 490B14481B77AA3100510FD7 /* timeout.001.jpg */; };
 		490B144C1B77AA3100510FD7 /* touchdown.001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 490B14491B77AA3100510FD7 /* touchdown.001.jpg */; };
+		49172ECA1B8CE2C700DA33FA /* black image.png in Resources */ = {isa = PBXBuildFile; fileRef = 49172EC91B8CE2C700DA33FA /* black image.png */; };
 		492221C31B76F72A0044D28D /* b954ef915193fb9f in Resources */ = {isa = PBXBuildFile; fileRef = 492221C21B76F72A0044D28D /* b954ef915193fb9f */; };
 		4925F9491B7674F000067971 /* Scoreboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 4925F9481B7674F000067971 /* Scoreboard.png */; };
 		494DF2BD1AFEE7F900D3B9E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 494DF2BC1AFEE7F900D3B9E0 /* AppDelegate.m */; };
@@ -58,6 +59,7 @@
 		490B14471B77AA3100510FD7 /* flag.001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flag.001.jpg; sourceTree = "<group>"; };
 		490B14481B77AA3100510FD7 /* timeout.001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timeout.001.jpg; sourceTree = "<group>"; };
 		490B14491B77AA3100510FD7 /* touchdown.001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = touchdown.001.jpg; sourceTree = "<group>"; };
+		49172EC91B8CE2C700DA33FA /* black image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black image.png"; sourceTree = "<group>"; };
 		492221C21B76F72A0044D28D /* b954ef915193fb9f */ = {isa = PBXFileReference; lastKnownFileType = folder; path = b954ef915193fb9f; sourceTree = "<group>"; };
 		4925F9481B7674F000067971 /* Scoreboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Scoreboard.png; sourceTree = "<group>"; };
 		494DF2B61AFEE7F900D3B9E0 /* Football Scorebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Football Scorebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +139,7 @@
 				49A708C11B758F43000379C7 /* Scorebug_Gradient.png */,
 				494DF2BB1AFEE7F900D3B9E0 /* AppDelegate.h */,
 				494DF2BC1AFEE7F900D3B9E0 /* AppDelegate.m */,
+				49172EC91B8CE2C700DA33FA /* black image.png */,
 				4908DF471B8CCB860046221A /* Screen Shot 2015-08-25 at 12.11.43 PM.png */,
 				4969DD6A1B8C9E650052BF76 /* Animation 1.m4v */,
 				4969DD6B1B8C9E650052BF76 /* animation 2.m4v */,
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				498500721B532B8C00CC09A0 /* scoreboard_example.png in Resources */,
+				49172ECA1B8CE2C700DA33FA /* black image.png in Resources */,
 				4908DF481B8CCB860046221A /* Screen Shot 2015-08-25 at 12.11.43 PM.png in Resources */,
 				4969DD6C1B8C9E650052BF76 /* Animation 1.m4v in Resources */,
 				498500751B532FA800CC09A0 /* new replay graphic.001.jpg in Resources */,
