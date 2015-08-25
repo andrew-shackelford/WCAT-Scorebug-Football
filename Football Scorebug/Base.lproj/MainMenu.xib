@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="15A263e" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
+        <plugIn identifier="com.apple.AVKitIBPlugin" version="7706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -14,6 +15,8 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="animationTwoView" destination="16O-9t-k3m" id="4mP-nl-ZAA"/>
+                <outlet property="animationView" destination="Jvl-Cd-dtw" id="rhg-85-pRd"/>
                 <outlet property="awayNameDisplay" destination="RgH-wS-gsl" id="cIp-Gs-hL2"/>
                 <outlet property="awayScoreControl" destination="Tt8-2y-ueA" id="NaZ-xA-J7u"/>
                 <outlet property="awayScoreDisplay" destination="Sn3-4c-B8R" id="6Aj-j9-9Lp"/>
@@ -22,6 +25,7 @@
                 <outlet property="clockControl" destination="kru-WF-Wc1" id="9Ww-Eu-VY2"/>
                 <outlet property="clockDisplay" destination="d2b-KT-3GH" id="LGx-Uv-Zsm"/>
                 <outlet property="clockShowingControl" destination="Sow-VF-ka7" id="9Y9-Oe-2Eh"/>
+                <outlet property="colorScorebug" destination="5AC-kc-lua" id="oY2-Y6-86b"/>
                 <outlet property="controlWindow" destination="QvC-M9-y7g" id="KCa-GY-qAH"/>
                 <outlet property="date" destination="jM2-IS-MUr" id="acO-d3-cCf"/>
                 <outlet property="displayFullScreenButton" destination="EU4-Zj-ang" id="690-iP-0Pd"/>
@@ -374,7 +378,7 @@
         <window title="WCAT Football Scorebug - Control" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <rect key="contentRect" x="335" y="390" width="1152" height="720"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <value key="minSize" type="size" width="1152" height="720"/>
             <value key="maxSize" type="size" width="1152" height="720"/>
             <view key="contentView" id="EiT-Mj-1SZ">
@@ -1027,7 +1031,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <rect key="contentRect" x="283" y="305" width="1920" height="1080"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <value key="minSize" type="size" width="1920" height="1080"/>
             <value key="maxSize" type="size" width="1920" height="1080"/>
             <view key="contentView" id="N1D-iC-c6a">
@@ -1238,6 +1242,31 @@
                         </subviews>
                         <animations/>
                     </customView>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Efl-aR-wod">
+                        <rect key="frame" x="-1" y="-1" width="1922" height="102"/>
+                        <subviews>
+                            <colorWell hidden="YES" fixedFrame="YES" bordered="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5AC-kc-lua">
+                                <rect key="frame" x="0.0" y="0.0" width="1922" height="102"/>
+                                <animations/>
+                                <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </colorWell>
+                        </subviews>
+                        <animations/>
+                    </customView>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3DN-dm-bsn">
+                        <rect key="frame" x="0.0" y="100" width="1920" height="980"/>
+                        <subviews>
+                            <avPlayerView fixedFrame="YES" controlsStyle="none" translatesAutoresizingMaskIntoConstraints="NO" id="Jvl-Cd-dtw">
+                                <rect key="frame" x="0.0" y="-100" width="1920" height="1080"/>
+                                <animations/>
+                            </avPlayerView>
+                            <avPlayerView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="16O-9t-k3m">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="980"/>
+                                <animations/>
+                            </avPlayerView>
+                        </subviews>
+                        <animations/>
+                    </customView>
                 </subviews>
                 <animations/>
             </view>
@@ -1247,7 +1276,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="120" y="64" width="276" height="186"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <value key="minSize" type="size" width="276" height="186"/>
             <value key="maxSize" type="size" width="276" height="186"/>
             <view key="contentView" id="1sJ-ut-xex">
@@ -1287,12 +1316,12 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </clipView>
                         <animations/>
-                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="Edd-va-qXc">
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="Edd-va-qXc">
                             <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <animations/>
                         </scroller>
-                        <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="irV-b4-rL4">
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="irV-b4-rL4">
                             <rect key="frame" x="261" y="1" width="16" height="186"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <animations/>
@@ -1307,7 +1336,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="120" y="64" width="276" height="382"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <value key="minSize" type="size" width="276" height="382"/>
             <value key="maxSize" type="size" width="276" height="382"/>
             <view key="contentView" id="Dfo-UG-kBy">
@@ -1321,8 +1350,9 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView editable="NO" selectable="NO" importsGraphics="NO" baseWritingDirection="leftToRight" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="buD-cN-qrm">
-                                    <rect key="frame" x="0.0" y="0.0" width="223" height="133"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="223" height="381"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <size key="minSize" width="276" height="381"/>
                                     <size key="maxSize" width="463" height="10000000"/>
@@ -1341,15 +1371,19 @@
                                     <size key="maxSize" width="463" height="10000000"/>
                                 </textView>
                             </subviews>
+                            <animations/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </clipView>
+                        <animations/>
                         <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="FVI-Cp-fXR">
                             <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                             <autoresizingMask key="autoresizingMask"/>
+                            <animations/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="qIF-Qq-IkK">
                             <rect key="frame" x="224" y="1" width="15" height="133"/>
                             <autoresizingMask key="autoresizingMask"/>
+                            <animations/>
                         </scroller>
                     </scrollView>
                 </subviews>
@@ -1361,7 +1395,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="120" y="64" width="276" height="81"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <view key="contentView" id="i54-zx-VW9">
                 <rect key="frame" x="0.0" y="0.0" width="276" height="81"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -1388,7 +1422,7 @@
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <textView editable="NO" selectable="NO" importsGraphics="NO" baseWritingDirection="leftToRight" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="hlc-4n-aB8">
-                        <rect key="frame" x="0.0" y="0.0" width="276" height="378"/>
+                        <rect key="frame" x="0.0" y="0.0" width="276" height="382"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1415,12 +1449,12 @@
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             </clipView>
             <animations/>
-            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="SBN-dN-pmx">
+            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="SBN-dN-pmx">
                 <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <animations/>
             </scroller>
-            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="R6J-a9-q0U">
+            <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="R6J-a9-q0U">
                 <rect key="frame" x="261" y="1" width="16" height="367"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <animations/>

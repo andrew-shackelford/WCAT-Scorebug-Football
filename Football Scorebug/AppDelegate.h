@@ -7,6 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <AVFoundation/AVFoundation.h>
+#import <AVKit/AVKit.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
@@ -125,6 +127,13 @@
 @property (weak) IBOutlet NSTextField *locatorAwaySeed;
 
 @property (weak) IBOutlet NSImageView *flagImage;
+
+
+@property (weak) IBOutlet AVPlayerView *animationView;
+
+@property (weak) IBOutlet NSColorWell *colorScorebug;
+
+@property (weak) IBOutlet AVPlayerView *animationTwoView;
 
 
 

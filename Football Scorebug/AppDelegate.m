@@ -17,6 +17,11 @@
 
 @implementation AppDelegate
 
+NSTimer *replayTimer;
+NSTimer *resetTimer;
+
+bool replayDone;
+
 bool timeoutShowing;
 bool touchdownShowing;
 bool flagShowing;
@@ -84,7 +89,8 @@ NSString *dateText;
     scoreboardShowing = false;
     
     replayShowing = true;
-    [self showReplay:self];
+    //[self showReplay:self];
+    [_replayImage setHidden:YES];
     replayShowing = false;
     
     NSAlert *alert = [[NSAlert alloc] init];
@@ -278,6 +284,10 @@ NSString *dateText;
     flagShowing = false;
     touchdownShowing = false;
     timeoutShowing = false;
+    
+    [_animationView setHidden:YES];
+    replayDone = YES;
+    [_animationTwoView setHidden:YES];
 }
 
 - (NSString*)getTimeString:(int)timeSeconds {
@@ -607,18 +617,69 @@ NSString *dateText;
 
 - (IBAction)showReplay:(id)sender {
     if (replayShowing) {
-        [_replayImage setHidden:YES];
+        if (!replayDone) {
+            [_animationView setHidden:YES];
+            [_colorScorebug setHidden:YES];
+        } else {
+            [self newReplayEnd];
+        }
         replayShowing = false;
         [_replayButton setTitle:@"Show Replay"];
         [_replayControl setStringValue:@"Hidden"];
         [_replayControl setTextColor:black];
     } else {
-        [_replayImage setHidden:NO];
-        replayShowing = true;
-        [_replayButton setTitle:@"Hide Replay"];
-        [_replayControl setStringValue:@"Showing"];
-        [_replayControl setTextColor:red];
+        if (!replayDone) {
+            [_animationView setHidden:YES];
+            [_colorScorebug setHidden:YES];
+            replayShowing = false;
+        } else {
+            [self newReplayStart];
+            replayShowing = true;
+            [_replayButton setTitle:@"Hide Replay"];
+            [_replayControl setStringValue:@"Showing"];
+            [_replayControl setTextColor:red];
+        }
     }
+
+}
+
+- (void) newReplayStart {
+    
+    NSURL* videoURL = [[NSBundle mainBundle] URLForResource:@"Animation 1" withExtension:@"m4v"];
+    self.animationView.player = [AVPlayer playerWithURL:videoURL];
+    
+    [_animationView setHidden:NO];
+    [[_animationView player] play];
+    replayDone = NO;
+    [_colorScorebug setHidden:NO];
+    resetTimer = [NSTimer scheduledTimerWithTimeInterval:2.1 target:self selector:@selector(resetReplay) userInfo:nil repeats:NO];
+    replayTimer = nil;
+
+}
+
+- (void) newReplayEnd {
+    
+    NSURL* videoURL = [[NSBundle mainBundle] URLForResource:@"animation 2" withExtension:@"m4v"];
+    self.animationView.player = [AVPlayer playerWithURL:videoURL];
+    [[_animationView player] play];
+    replayDone = NO;
+    replayTimer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(replayScorebug) userInfo:self repeats:NO];
+}
+
+- (void) resetReplay {
+    replayDone = YES;
+    [resetTimer invalidate];
+    resetTimer = nil;
+    
+    
+}
+
+- (void) replayScorebug {
+    replayDone = YES;
+    [_animationView setHidden:YES];
+    [_colorScorebug setHidden:YES];
+    [replayTimer invalidate];
+    replayTimer = nil;
 }
 
 - (IBAction)hideClock:(id)sender {
