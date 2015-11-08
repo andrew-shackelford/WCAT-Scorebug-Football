@@ -136,6 +136,10 @@
 @property (weak) IBOutlet AVPlayerView *animationTwoView;
 
 
+@property (weak) IBOutlet NSTextField *optText;
+
+@property (weak) IBOutlet NSImageView *optTextBackground;
+
 
 @end
 

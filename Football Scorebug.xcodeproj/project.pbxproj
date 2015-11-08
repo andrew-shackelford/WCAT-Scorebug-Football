@@ -15,6 +15,7 @@
 		49172ECA1B8CE2C700DA33FA /* black image.png in Resources */ = {isa = PBXBuildFile; fileRef = 49172EC91B8CE2C700DA33FA /* black image.png */; };
 		492221C31B76F72A0044D28D /* b954ef915193fb9f in Resources */ = {isa = PBXBuildFile; fileRef = 492221C21B76F72A0044D28D /* b954ef915193fb9f */; };
 		4925F9491B7674F000067971 /* Scoreboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 4925F9481B7674F000067971 /* Scoreboard.png */; };
+		49320EAB1BEEECA70085F96D /* opt_text.png in Resources */ = {isa = PBXBuildFile; fileRef = 49320EAA1BEEECA70085F96D /* opt_text.png */; };
 		494DF2BD1AFEE7F900D3B9E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 494DF2BC1AFEE7F900D3B9E0 /* AppDelegate.m */; };
 		494DF2BF1AFEE7F900D3B9E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 494DF2BE1AFEE7F900D3B9E0 /* main.m */; };
 		494DF2C11AFEE7F900D3B9E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494DF2C01AFEE7F900D3B9E0 /* Images.xcassets */; };
@@ -62,6 +63,7 @@
 		49172EC91B8CE2C700DA33FA /* black image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black image.png"; sourceTree = "<group>"; };
 		492221C21B76F72A0044D28D /* b954ef915193fb9f */ = {isa = PBXFileReference; lastKnownFileType = folder; path = b954ef915193fb9f; sourceTree = "<group>"; };
 		4925F9481B7674F000067971 /* Scoreboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Scoreboard.png; sourceTree = "<group>"; };
+		49320EAA1BEEECA70085F96D /* opt_text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = opt_text.png; sourceTree = "<group>"; };
 		494DF2B61AFEE7F900D3B9E0 /* Football Scorebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Football Scorebug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		494DF2BA1AFEE7F900D3B9E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		494DF2BB1AFEE7F900D3B9E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				490B14491B77AA3100510FD7 /* touchdown.001.jpg */,
 				498500711B532B8C00CC09A0 /* scorebug_template.jpg */,
 				4925F9481B7674F000067971 /* Scoreboard.png */,
+				49320EAA1BEEECA70085F96D /* opt_text.png */,
 				494DF2B81AFEE7F900D3B9E0 /* Football Scorebug */,
 				494DF2CC1AFEE7FA00D3B9E0 /* Football ScorebugTests */,
 				494DF2B71AFEE7F900D3B9E0 /* Products */,
@@ -269,6 +272,7 @@
 				4969DD6C1B8C9E650052BF76 /* Animation 1.m4v in Resources */,
 				498500751B532FA800CC09A0 /* new replay graphic.001.jpg in Resources */,
 				492221C31B76F72A0044D28D /* b954ef915193fb9f in Resources */,
+				49320EAB1BEEECA70085F96D /* opt_text.png in Resources */,
 				494DF2C11AFEE7F900D3B9E0 /* Images.xcassets in Resources */,
 				4925F9491B7674F000067971 /* Scoreboard.png in Resources */,
 				49A708C21B758F43000379C7 /* Scorebug_Gradient.png in Resources */,
@@ -422,6 +426,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.11;
 			};
 			name = Debug;
 		};
@@ -438,6 +443,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx10.11;
 			};
 			name = Release;
 		};

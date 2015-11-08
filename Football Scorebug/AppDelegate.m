@@ -46,6 +46,8 @@ int homeSeed;
 bool andGoal;
 bool justDown;
 
+bool optText;
+
 bool clockRunning;
 
 NSTimer *clockTimer;
@@ -67,6 +69,8 @@ NSString *location;
 NSString *replayHide;
 
 NSString *dateText;
+
+NSString *optionalText;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [_displayWindow close];
@@ -171,6 +175,26 @@ NSString *dateText;
         location = [input5 stringValue];
     }
 
+    NSAlert *alert8 = [[NSAlert alloc] init];
+    [alert8 setMessageText:@"If you would like any optional text, enter it in below"];
+    [alert8 addButtonWithTitle:@"Ok"];
+    NSTextField *input8 = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, 200, 24)];
+    [input8 setStringValue:@""];
+    [alert8 setAccessoryView:input8];
+    NSInteger button8 = [alert8 runModal];
+    if (button8 == NSAlertFirstButtonReturn) {
+         optionalText = [input8 stringValue];
+    }
+    
+    if ([optionalText isEqualToString:@""]) {
+        optText = false;
+        [_optText setStringValue:@""];
+        [_optTextBackground setHidden:YES];
+    } else {
+        optText = true;
+        [_optTextBackground setHidden:NO];
+        [_optText setStringValue:optionalText];
+    }
     
     [_awayNameDisplay setStringValue:awayName];
     [_homeNameDisplay setStringValue:homeName];
@@ -295,7 +319,9 @@ NSString *dateText;
     NSURL* videoURLTwo = [[NSBundle mainBundle] URLForResource:@"animation 2" withExtension:@"m4v"];
     self.animationTwoView.player = [AVPlayer playerWithURL:videoURLTwo];
     
-    
+    optText = false;
+    [_optText setStringValue:@""];
+    [_optTextBackground setHidden:YES];
 }
 
 - (NSString*)getTimeString:(int)timeSeconds {
@@ -680,7 +706,7 @@ NSString *dateText;
     [[_animationView player] play];
     replayDone = NO;
     [_colorScorebug setHidden:NO];
-    resetTimer = [NSTimer scheduledTimerWithTimeInterval:2.1 target:self selector:@selector(resetReplay) userInfo:nil repeats:NO];
+    resetTimer = [NSTimer scheduledTimerWithTimeInterval:2.2 target:self selector:@selector(resetReplay) userInfo:nil repeats:NO];
     replayTimer = nil;
 
 }
@@ -1141,6 +1167,8 @@ NSString *dateText;
         [_awaySeed setHidden:YES];
         [_homeSeed setHidden:YES];
         [_flagImage setHidden:YES];
+        [_optText setHidden:YES];
+        [_optTextBackground setHidden:YES];
         [_timeoutControl setStringValue:@"Hidden"];
         [_timeoutControl setTextColor:black];
         [_flagControl setStringValue:@"Hidden"];
@@ -1161,6 +1189,10 @@ NSString *dateText;
         [_scorebugBackground setHidden:NO];
         [_awaySeed setHidden:NO];
         [_homeSeed setHidden:NO];
+        if (optText) {
+            [_optText setHidden:NO];
+            [_optTextBackground setHidden:NO];
+        }
     }
 
 }
